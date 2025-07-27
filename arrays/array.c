@@ -1,30 +1,22 @@
 #include <stdio.h>
-
+#define n 5
 int main(){
 
-    const int size = 5;
-    int arr[size]={};
+    int arr[n]= { 1, 5, 4, 2, 3};
 
-    printf("Input your array elements: ");
-    for(int i = 0; i < size; ++i)
-       scanf("%d", &arr[i]);
+    int arr1[n+1] = {};
 
-    int n = 0;
-    printf("Input n: ");
-    scanf("%d", &n);
-    int flag = 1;
-
-    for (int i = 0; i <= n; i++){
-         for(int j = 0; j < size; j++ ){
-             if (arr[j] == i){
-                 flag = 0;
-             }	     
-         }
-	  if(flag)
-		  printf("%d ", i);
-	  flag = 1;
+    for (int i = 0; i <= n; i++ ) {
+         arr1[arr[i]] = 1;
     }
-    printf("\n");
+     
+    int a = 0;
+    for(int i = 0; i <= n; i++){
+        if(arr1[i] == 0)
+           a = i;
+    }
+
+    printf("Missing number is %d\n", a);
 
 
 
