@@ -16,15 +16,12 @@ int main(){
   
     for(int i = 0; i < size; ++i){
        if (arr[i] == number){
-	   flag = 1;
-           break;
+           printf("YES\n");
+	   return 0;
        }
     }
-
-    if(flag)
-       printf("%d is present\n", number);
-    else 
-       printf("%d is not present\n", number);
+ 
+       printf("NO\n");
 
    
 
