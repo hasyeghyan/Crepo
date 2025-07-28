@@ -1,8 +1,14 @@
 #include <stdio.h>
 #define n 5
 int main(){
+    
+    int arr[n]= {};
 
-    int arr[n]= { 0, 1, 0, 3, 12};
+    printf("Please input your array: ");
+            for (int i = 0; i < n ; i++){
+                 scanf("%d", &arr[i]);
+            }
+
     int temp = 0;
 
     for(int i = 0; i < n ; i++){
