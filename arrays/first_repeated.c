@@ -8,6 +8,8 @@ int main(){
    printf("Please input your array: ");
    for(int i = 0; i < size; i++){
        scanf(" %c", &arr[i]);
+       if (arr[i] < 'a' || arr[i] > 'z')
+	   return 0;
    }
    
    int current_index = 0;
