@@ -4,7 +4,6 @@ int main(){
 
    const int size = 7;
    char arr[size] ={};
-   int arr1[26] = {};
    int check[26] = {};
 
    printf("Please input your array: ");
@@ -12,9 +11,6 @@ int main(){
        scanf(" %c", &arr[i]);
    }
 
-   for(int i = 0; i < size; i++){
-       arr1[arr[i] - 97] += 1;
-   }
    
    for(int i = 0; i < size; i++){
        if(!check[arr[i] - 97]){
