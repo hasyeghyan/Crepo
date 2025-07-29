@@ -8,8 +8,8 @@ int main(){
 
     printf("Input your array elements: ");
     for(int i = 0; i < size; ++i)
-       scanf("%d", &arr[i]);
-
+	scanf("%d", &arr[i]);
+   
     int temp = 0;
     for (int i = 0; i < size; i++){
          for(int j = i + 1; j < size; j++ ){
@@ -28,15 +28,16 @@ int main(){
     }
     printf("\n");
 
-  printf("Sorted array without duplicates: ");
-  printf("%d ", arr[0]);
-  for (int i = 1; i < size; i++){
-         if(arr[i] != arr[i - 1])
-           printf("%d ", arr[i]);
-      
-  }
+    printf("Sorted array is: ");
+    printf("%d ", arr[0]);
+    for (int i = 1; i < size; i++){
+         if (arr[i] != arr[i - 1])
+             printf("%d ", arr[i]);
+    }
 
- 
+    
+
+    
    printf("\n");
  
    return 0;
