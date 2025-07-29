@@ -54,30 +54,28 @@ int main(){
    int arr2[2 * size] = {};
    int i = 0;
    int j = 0;
-        while  ((i) != size){
-		arr2[i] = arr[i];
-	        i++;
+   int k = 0;
+        while  ((i < size) && (j < size)){
+	        if(arr[i] <= arr1[j]){
+		       arr2[k++] = arr[i];
+		       i++;
+		}
+		else{ 
+	            arr2[k++] = arr1[j];
+		    j++;
+		}
 	}
-	while ((i) != (2 * size)){
-		arr2[i] = arr1[i - size];
-	       i++;
-	}	       
-    
-	temp = 0;
 
-        for (i = 0; i < 2 * size; i++){
-         for(j = i + 1; j < 2 * size; j++ ){
-             if (arr2[i] > arr2[j]){
-                 temp = arr2[i];
-                 arr2[i] = arr2[j];
-                 arr2[j] = temp;
-             }
-         }
-    }
+	if(i == size)
+           while (j < size)
+                  arr2[k++] = arr1[j++] ;
+	if (j == size)
+	    while(i < size)
+	          arr2[k++] = arr[j++];
    
     printf("Sorted  merged array is: ") ;
-     for(i = 0; i < 2 * size; i++){
-        printf("%d ", arr2[i]);
+     for(int l = 0; l < 2 * size; l++){
+        printf("%d ", arr2[l]);
 
     }
      printf("\n");
