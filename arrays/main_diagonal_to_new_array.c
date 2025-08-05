@@ -5,7 +5,7 @@ int main(){
     const int n = 3;
     int matrix[n][n]={};
     
-    const int size = n;
+    const int size = 3;
     int arr[size] = {};
 
     printf("Input your array elements: ");
