@@ -71,7 +71,7 @@ int main(){
                   arr2[k++] = arr1[j++] ;
 	if (j == size)
 	    while(i < size)
-	          arr2[k++] = arr[j++];
+	          arr2[k++] = arr[i++];
    
     printf("Sorted  merged array is: ") ;
      for(int l = 0; l < 2 * size; l++){
